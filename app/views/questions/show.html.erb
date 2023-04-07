@@ -1,0 +1,25 @@
+<section class="section">
+  <div class="container">
+    <div class="features-inner section-inner">
+      <div class="features-header">
+        <div class="container-sm">
+          <h2 class="section-title mt-0"><%= @current_question.title %></h2>
+          <h4><%= @current_question.description %>:</h4>
+        </div>
+      </div>
+      <div class="container-sm">
+        <%= form_tag save_answer_question_path(@current_question.id), method: :put do %>
+          <div class="control control-expanded">
+            <% @current_question.options.each do |option| %>
+              <%= radio_button_tag :options, option['score'], false, class: 'mt-16', required: true %> <%= option['text'] %><br />
+            <% end %>
+          <div>
+
+          <div class="control mt-32">
+            <%= submit_tag 'Submit', class: 'button button-primary button-block' %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</section>

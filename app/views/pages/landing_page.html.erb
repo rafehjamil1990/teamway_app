@@ -1,0 +1,21 @@
+<section class="hero">
+  <div class="container">
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <h1 class="hero-title mt-0">Free Personality Test</h1>
+        <p class="hero-paragraph">Discover your personality type</p>
+        <%= form_tag questions_path do %>
+          <div class="hero-form field field-grouped">
+            <div class="control control-expanded">
+                <%= text_field_tag 'username', nil, placeholder: "Your name", class: 'input' %>
+            </div>
+          <div class="control">
+            <%= submit_tag 'Start Personality Test', class: 'button button-primary button-block' %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+
+    <%= render 'layouts/illustration' %>
+  </div>
+</section>
