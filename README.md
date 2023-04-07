@@ -8,6 +8,7 @@ Step 1: Setup memcached locally
 Step 2: Setup Application
   - install ruby version: 3.2.2
   - install dependencies by running `bundle install`
+  - run `rspec` to make sure all test case pass
   - run application: `bundle exec rails s`. now application will be accessible on localhost:3000
 
 
